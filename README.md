@@ -35,4 +35,4 @@ You can use any hashable type for the identifier that you pass to `.trackVisibil
 
 If you accidentally use a different types in both places, it won't be connected at compile-time, since it's completely valid code. At runtime, however, the trackVisiblity modifier will fail to find the environment object that it is expecting, and you'll get a crash. 
 
-See the Extras folder for an [Example Project](Extras/Example.xcodeproj).
+See the [Extras folder](/Extras) for an example project.

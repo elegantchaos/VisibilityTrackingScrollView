@@ -28,7 +28,10 @@ public class VisibilityTracker<ID: Hashable>: ObservableObject {
     }
     
     public func reportContentBounds(_ bounds: CGRect, id: ID) {
-        let isVisible = containerBounds.contains(bounds.origin)
+        let topLeft = bounds.origin
+        let size = bounds.size
+        let bottomRight = CGPoint(x: topLeft.x + size.width, y: topLeft.y + size.height)
+        let isVisible = containerBounds.contains(topLeft) || containerBounds.contains(bottomRight)
         if visibleItems.contains(id) {
             if !isVisible {
                 visibleItems.remove(id)

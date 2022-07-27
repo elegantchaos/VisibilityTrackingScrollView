@@ -11,7 +11,6 @@ Usage:
             LazyVStack {
                 ForEach(0..<100, id: \.self) { item in
                     Text("\(item)")
-                        .background(Color.random())
                         .trackVisibility(id: "\(item)")
                 }
             }

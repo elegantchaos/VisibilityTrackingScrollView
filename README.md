@@ -34,4 +34,4 @@ You can use any hashable type for the identifier.
 
 When a tracked view is scrolled into or out of the visible portion of the container, the callback will be called, with the id and new state of the tracked view.
 
-
+See the Extras folder for an [Example Project](Extras/Example.xcodeproj).

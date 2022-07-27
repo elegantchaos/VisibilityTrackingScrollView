@@ -1,0 +1,48 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//  Created by Sam Deane on 27/07/22.
+//  All code (c) 2022 - present day, Elegant Chaos Limited.
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+import SwiftUI
+
+public class VisibilityTracker<ID: Hashable>: ObservableObject {
+    var containerBounds: CGRect
+    var visibleItems: Set<ID>
+    var action: Action
+    public enum State {
+        case hidden
+        case visible
+    }
+
+    public typealias Action = (ID, State) -> ()
+
+    public init(action: @escaping Action) {
+        self.containerBounds = .zero
+        self.visibleItems = []
+        self.action = action
+    }
+    
+
+    public func reportContainerBounds(_ bounds: CGRect) {
+        print("container is at \(bounds)")
+        containerBounds = bounds
+    }
+    
+    public func reportContentBounds(_ bounds: CGRect, id: ID) {
+        let isVisible = containerBounds.contains(bounds.origin)
+        if visibleItems.contains(id) {
+            if !isVisible {
+                print("\(id) hidden")
+                visibleItems.remove(id)
+                action(id, .hidden)
+            }
+        } else {
+            if isVisible {
+                print("\(id) shown")
+                visibleItems.insert(id)
+                action(id, .visible)
+            }
+        }
+    }
+}
+

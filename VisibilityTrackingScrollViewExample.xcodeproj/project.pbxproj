@@ -11,6 +11,7 @@
 		22F4E20E2891757900F50B81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4E20D2891757900F50B81 /* ContentView.swift */; };
 		22F4E2102891757B00F50B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4E20F2891757B00F50B81 /* Assets.xcassets */; };
 		22F4E2142891757B00F50B81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4E2132891757B00F50B81 /* Preview Assets.xcassets */; };
+		22F4E21D28917FC400F50B81 /* VisibilityTrackingScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 22F4E21C28917FC400F50B81 /* VisibilityTrackingScrollView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		22F4E20F2891757B00F50B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F4E2112891757B00F50B81 /* VisibilityTrackingScrollViewExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VisibilityTrackingScrollViewExample.entitlements; sourceTree = "<group>"; };
 		22F4E2132891757B00F50B81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		22F4E21A28917F7B00F50B81 /* VisibilityTrackingScrollView */ = {isa = PBXFileReference; lastKnownFileType = text; path = VisibilityTrackingScrollView; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F4E21D28917FC400F50B81 /* VisibilityTrackingScrollView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 			children = (
 				22F4E20A2891757900F50B81 /* VisibilityTrackingScrollViewExample */,
 				22F4E2092891757900F50B81 /* Products */,
+				22F4E21B28917FC400F50B81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +56,7 @@
 		22F4E20A2891757900F50B81 /* VisibilityTrackingScrollViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				22F4E21A28917F7B00F50B81 /* VisibilityTrackingScrollView */,
 				22F4E20B2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift */,
 				22F4E20D2891757900F50B81 /* ContentView.swift */,
 				22F4E20F2891757B00F50B81 /* Assets.xcassets */,
@@ -67,6 +72,13 @@
 				22F4E2132891757B00F50B81 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22F4E21B28917FC400F50B81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +97,9 @@
 			dependencies = (
 			);
 			name = VisibilityTrackingScrollViewExample;
+			packageProductDependencies = (
+				22F4E21C28917FC400F50B81 /* VisibilityTrackingScrollView */,
+			);
 			productName = VisibilityTrackingScrollViewExample;
 			productReference = 22F4E2082891757900F50B81 /* VisibilityTrackingScrollViewExample.app */;
 			productType = "com.apple.product-type.application";
@@ -350,6 +365,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22F4E21C28917FC400F50B81 /* VisibilityTrackingScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VisibilityTrackingScrollView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22F4E2002891757900F50B81 /* Project object */;
 }

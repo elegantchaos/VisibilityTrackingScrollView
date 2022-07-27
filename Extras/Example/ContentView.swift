@@ -33,8 +33,8 @@ struct ContentView: View {
         }
     }
     
-    func handleVisibilityChanged(_ id: String, state: VisibilityTracker<String>.Change) {
-        switch state {
+    func handleVisibilityChanged(_ id: String, change: VisibilityChange) {
+        switch change {
             case .shown: print("\(id) shown")
             case .hidden: print("\(id) hidden")
         }

@@ -5,16 +5,17 @@
 
 import SwiftUI
 
+public enum VisibilityChange {
+    case hidden
+    case shown
+}
+
 public class VisibilityTracker<ID: Hashable>: ObservableObject {
     var containerBounds: CGRect
     var visibleItems: Set<ID>
     var action: Action
-    public enum Change {
-        case hidden
-        case shown
-    }
 
-    public typealias Action = (ID, Change) -> ()
+    public typealias Action = (ID, VisibilityChange) -> ()
 
     public init(action: @escaping Action) {
         self.containerBounds = .zero

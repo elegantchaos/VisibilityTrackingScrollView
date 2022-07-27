@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221A8B052891877A00C53567 /* VisibilityTrackingScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 221A8B042891877A00C53567 /* VisibilityTrackingScrollView */; };
 		22F4E20C2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4E20B2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift */; };
 		22F4E20E2891757900F50B81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4E20D2891757900F50B81 /* ContentView.swift */; };
 		22F4E2102891757B00F50B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4E20F2891757B00F50B81 /* Assets.xcassets */; };
 		22F4E2142891757B00F50B81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4E2132891757B00F50B81 /* Preview Assets.xcassets */; };
-		22F4E21D28917FC400F50B81 /* VisibilityTrackingScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 22F4E21C28917FC400F50B81 /* VisibilityTrackingScrollView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221A8B032891876D00C53567 /* VisibilityTrackingScrollView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = VisibilityTrackingScrollView; path = ..; sourceTree = "<group>"; };
 		22F4E2082891757900F50B81 /* VisibilityTrackingScrollViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisibilityTrackingScrollViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F4E20B2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibilityTrackingScrollViewExampleApp.swift; sourceTree = "<group>"; };
 		22F4E20D2891757900F50B81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		22F4E20F2891757B00F50B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F4E2112891757B00F50B81 /* VisibilityTrackingScrollViewExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VisibilityTrackingScrollViewExample.entitlements; sourceTree = "<group>"; };
 		22F4E2132891757B00F50B81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		22F4E21A28917F7B00F50B81 /* VisibilityTrackingScrollView */ = {isa = PBXFileReference; lastKnownFileType = text; path = VisibilityTrackingScrollView; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,18 +29,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F4E21D28917FC400F50B81 /* VisibilityTrackingScrollView in Frameworks */,
+				221A8B052891877A00C53567 /* VisibilityTrackingScrollView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221A8B022891876D00C53567 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				221A8B032891876D00C53567 /* VisibilityTrackingScrollView */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		22F4E1FF2891757900F50B81 = {
 			isa = PBXGroup;
 			children = (
-				22F4E21A28917F7B00F50B81 /* VisibilityTrackingScrollView */,
 				22F4E20A2891757900F50B81 /* VisibilityTrackingScrollViewExample */,
+				221A8B022891876D00C53567 /* Packages */,
 				22F4E2092891757900F50B81 /* Products */,
 				22F4E21B28917FC400F50B81 /* Frameworks */,
 			);
@@ -63,7 +71,8 @@
 				22F4E2112891757B00F50B81 /* VisibilityTrackingScrollViewExample.entitlements */,
 				22F4E2122891757B00F50B81 /* Preview Content */,
 			);
-			path = VisibilityTrackingScrollViewExample;
+			name = VisibilityTrackingScrollViewExample;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		22F4E2122891757B00F50B81 /* Preview Content */ = {
@@ -98,7 +107,7 @@
 			);
 			name = VisibilityTrackingScrollViewExample;
 			packageProductDependencies = (
-				22F4E21C28917FC400F50B81 /* VisibilityTrackingScrollView */,
+				221A8B042891877A00C53567 /* VisibilityTrackingScrollView */,
 			);
 			productName = VisibilityTrackingScrollViewExample;
 			productReference = 22F4E2082891757900F50B81 /* VisibilityTrackingScrollViewExample.app */;
@@ -119,7 +128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 22F4E2032891757900F50B81 /* Build configuration list for PBXProject "VisibilityTrackingScrollViewExample" */;
+			buildConfigurationList = 22F4E2032891757900F50B81 /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,10 +285,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = VisibilityTrackingScrollViewExample/VisibilityTrackingScrollViewExample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Example/VisibilityTrackingScrollViewExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"VisibilityTrackingScrollViewExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
 				DEVELOPMENT_TEAM = 2H48644JM2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -301,6 +310,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,10 +323,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = VisibilityTrackingScrollViewExample/VisibilityTrackingScrollViewExample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Example/VisibilityTrackingScrollViewExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"VisibilityTrackingScrollViewExample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
 				DEVELOPMENT_TEAM = 2H48644JM2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -337,6 +348,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -346,7 +359,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22F4E2032891757900F50B81 /* Build configuration list for PBXProject "VisibilityTrackingScrollViewExample" */ = {
+		22F4E2032891757900F50B81 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22F4E2152891757B00F50B81 /* Debug */,
@@ -367,7 +380,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		22F4E21C28917FC400F50B81 /* VisibilityTrackingScrollView */ = {
+		221A8B042891877A00C53567 /* VisibilityTrackingScrollView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = VisibilityTrackingScrollView;
 		};

@@ -33,6 +33,6 @@ When a tracked view is scrolled into or out of the visible portion of the contai
 
 You can use any hashable type for the identifier that you pass to `.trackVisibility`, but it must match the type that the callback is using (in the example above, we're using `String` identifiers).
 
-If you accidentally use a different types in both places, it won't be connected at compile-time, since it's completely valid code. At runtime, however, the trackVisiblity modifier will fail to find the environment object that it is expecting, and you'll get a crash. 
+If you accidentally use a different types in both places, it won't be detected at compile-time, since it's completely valid code. At runtime, however, the trackVisiblity modifier will fail to find the environment object that it is expecting, and you'll get a crash. 
 
 See the [Extras folder](/Extras) for an example project.

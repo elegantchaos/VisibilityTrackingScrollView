@@ -9,12 +9,12 @@ public class VisibilityTracker<ID: Hashable>: ObservableObject {
     var containerBounds: CGRect
     var visibleItems: Set<ID>
     var action: Action
-    public enum State {
+    public enum Change {
         case hidden
-        case visible
+        case shown
     }
 
-    public typealias Action = (ID, State) -> ()
+    public typealias Action = (ID, Change) -> ()
 
     public init(action: @escaping Action) {
         self.containerBounds = .zero
@@ -24,7 +24,6 @@ public class VisibilityTracker<ID: Hashable>: ObservableObject {
     
 
     public func reportContainerBounds(_ bounds: CGRect) {
-        print("container is at \(bounds)")
         containerBounds = bounds
     }
     
@@ -32,15 +31,13 @@ public class VisibilityTracker<ID: Hashable>: ObservableObject {
         let isVisible = containerBounds.contains(bounds.origin)
         if visibleItems.contains(id) {
             if !isVisible {
-                print("\(id) hidden")
                 visibleItems.remove(id)
                 action(id, .hidden)
             }
         } else {
             if isVisible {
-                print("\(id) shown")
                 visibleItems.insert(id)
-                action(id, .visible)
+                action(id, .shown)
             }
         }
     }

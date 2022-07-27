@@ -39,6 +39,7 @@
 		22F4E1FF2891757900F50B81 = {
 			isa = PBXGroup;
 			children = (
+				22F4E21A28917F7B00F50B81 /* VisibilityTrackingScrollView */,
 				22F4E20A2891757900F50B81 /* VisibilityTrackingScrollViewExample */,
 				22F4E2092891757900F50B81 /* Products */,
 				22F4E21B28917FC400F50B81 /* Frameworks */,
@@ -56,7 +57,6 @@
 		22F4E20A2891757900F50B81 /* VisibilityTrackingScrollViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				22F4E21A28917F7B00F50B81 /* VisibilityTrackingScrollView */,
 				22F4E20B2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift */,
 				22F4E20D2891757900F50B81 /* ContentView.swift */,
 				22F4E20F2891757B00F50B81 /* Assets.xcassets */,

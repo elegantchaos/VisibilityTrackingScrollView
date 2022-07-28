@@ -16,17 +16,20 @@ public struct VisibilityTrackingScrollView<Content, ID>: View where Content: Vie
     }
     
     public var body: some View {
-        GeometryReader { proxy in
-            ScrollView {
-                report(content, proxy: proxy)
-                    .environmentObject(visibilityTracker)
-            }
+        ScrollView {
+            content
+                .environmentObject(visibilityTracker)
         }
+        .background(
+            GeometryReader { proxy in
+                report(proxy: proxy)
+            }
+        )
     }
     
-    func report(_ content: Content, proxy: GeometryProxy) -> Content {
+    func report(proxy: GeometryProxy) -> Color {
         visibilityTracker.reportContainerBounds(proxy.frame(in: .global))
-        return content
+        return Color.clear
     }
     
 }

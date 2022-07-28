@@ -1,9 +1,7 @@
-//
-//  ContentView.swift
-//  VisibilityTrackingScrollViewExample
-//
-//  Created by Sam Deane on 27/07/2022.
-//
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//  Created by Sam Deane on 28/07/22.
+//  All code (c) 2022 - present day, Elegant Chaos Limited.
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 import SwiftUI
 import VisibilityTrackingScrollView
@@ -26,6 +24,7 @@ struct ContentView: View {
             LazyVStack {
                 ForEach(0..<100, id: \.self) { item in
                     Text("\(item)")
+                        .frame(width: 100, height: CGFloat.random(in: 20...60))
                         .background(Color.random())
                         .trackVisibility(id: "\(item)")
                 }

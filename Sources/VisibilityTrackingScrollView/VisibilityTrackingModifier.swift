@@ -11,15 +11,18 @@ struct ContentVisibilityTrackingModifier<ID: Hashable>: ViewModifier {
     let id: ID
     
     func body(content: Content) -> some View {
-        GeometryReader { proxy in
-            report(content, proxy: proxy)
-        }
+        content
+            .id(id)
+            .background(
+                GeometryReader { proxy in
+                    report(proxy: proxy)
+                }
+            )
     }
     
-    func report(_ content: Content, proxy: GeometryProxy) -> some View {
+    func report(proxy: GeometryProxy) -> Color {
         visibilityTracker.reportContentBounds(proxy.frame(in: .global), id: id)
-        return content
-            .id(id)
+        return Color.clear
     }
 }
 

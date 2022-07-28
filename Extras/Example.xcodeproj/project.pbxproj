@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		221A8B052891877A00C53567 /* VisibilityTrackingScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 221A8B042891877A00C53567 /* VisibilityTrackingScrollView */; };
-		22F4E20C2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4E20B2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift */; };
+		22F4E20C2891757900F50B81 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4E20B2891757900F50B81 /* ExampleApp.swift */; };
 		22F4E20E2891757900F50B81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4E20D2891757900F50B81 /* ContentView.swift */; };
 		22F4E2102891757B00F50B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4E20F2891757B00F50B81 /* Assets.xcassets */; };
 		22F4E2142891757B00F50B81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4E2132891757B00F50B81 /* Preview Assets.xcassets */; };
@@ -16,8 +16,8 @@
 
 /* Begin PBXFileReference section */
 		221A8B032891876D00C53567 /* VisibilityTrackingScrollView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = VisibilityTrackingScrollView; path = ..; sourceTree = "<group>"; };
-		22F4E2082891757900F50B81 /* VisibilityTrackingScrollViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisibilityTrackingScrollViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		22F4E20B2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibilityTrackingScrollViewExampleApp.swift; sourceTree = "<group>"; };
+		22F4E2082891757900F50B81 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F4E20B2891757900F50B81 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		22F4E20D2891757900F50B81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		22F4E20F2891757B00F50B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F4E2112891757B00F50B81 /* VisibilityTrackingScrollViewExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VisibilityTrackingScrollViewExample.entitlements; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		22F4E1FF2891757900F50B81 = {
 			isa = PBXGroup;
 			children = (
-				22F4E20A2891757900F50B81 /* VisibilityTrackingScrollViewExample */,
+				22F4E20A2891757900F50B81 /* Source */,
 				221A8B022891876D00C53567 /* Packages */,
 				22F4E2092891757900F50B81 /* Products */,
 				22F4E21B28917FC400F50B81 /* Frameworks */,
@@ -57,21 +57,21 @@
 		22F4E2092891757900F50B81 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22F4E2082891757900F50B81 /* VisibilityTrackingScrollViewExample.app */,
+				22F4E2082891757900F50B81 /* ExampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		22F4E20A2891757900F50B81 /* VisibilityTrackingScrollViewExample */ = {
+		22F4E20A2891757900F50B81 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				22F4E20B2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift */,
+				22F4E20B2891757900F50B81 /* ExampleApp.swift */,
 				22F4E20D2891757900F50B81 /* ContentView.swift */,
 				22F4E20F2891757B00F50B81 /* Assets.xcassets */,
 				22F4E2112891757B00F50B81 /* VisibilityTrackingScrollViewExample.entitlements */,
 				22F4E2122891757B00F50B81 /* Preview Content */,
 			);
-			name = VisibilityTrackingScrollViewExample;
+			name = Source;
 			path = Example;
 			sourceTree = "<group>";
 		};
@@ -93,9 +93,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22F4E2072891757900F50B81 /* VisibilityTrackingScrollViewExample */ = {
+		22F4E2072891757900F50B81 /* ExampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22F4E2172891757B00F50B81 /* Build configuration list for PBXNativeTarget "VisibilityTrackingScrollViewExample" */;
+			buildConfigurationList = 22F4E2172891757B00F50B81 /* Build configuration list for PBXNativeTarget "ExampleApp" */;
 			buildPhases = (
 				22F4E2042891757900F50B81 /* Sources */,
 				22F4E2052891757900F50B81 /* Frameworks */,
@@ -105,12 +105,12 @@
 			);
 			dependencies = (
 			);
-			name = VisibilityTrackingScrollViewExample;
+			name = ExampleApp;
 			packageProductDependencies = (
 				221A8B042891877A00C53567 /* VisibilityTrackingScrollView */,
 			);
 			productName = VisibilityTrackingScrollViewExample;
-			productReference = 22F4E2082891757900F50B81 /* VisibilityTrackingScrollViewExample.app */;
+			productReference = 22F4E2082891757900F50B81 /* ExampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				22F4E2072891757900F50B81 /* VisibilityTrackingScrollViewExample */,
+				22F4E2072891757900F50B81 /* ExampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F4E20E2891757900F50B81 /* ContentView.swift in Sources */,
-				22F4E20C2891757900F50B81 /* VisibilityTrackingScrollViewExampleApp.swift in Sources */,
+				22F4E20C2891757900F50B81 /* ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +301,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
@@ -339,7 +339,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
@@ -368,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22F4E2172891757B00F50B81 /* Build configuration list for PBXNativeTarget "VisibilityTrackingScrollViewExample" */ = {
+		22F4E2172891757B00F50B81 /* Build configuration list for PBXNativeTarget "ExampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22F4E2182891757B00F50B81 /* Debug */,

@@ -32,10 +32,13 @@ struct ContentView: View {
         }
     }
     
-    func handleVisibilityChanged(_ id: String, change: VisibilityChange) {
+    func handleVisibilityChanged(_ id: String, change: VisibilityChange, tracker: VisibilityTracker<String>) {
         switch change {
             case .shown: print("\(id) shown")
             case .hidden: print("\(id) hidden")
+        }
+        if let top = tracker.topVisibleView {
+            print("Top view is \(top), at \(tracker.visibleViews[top]!)")
         }
     }
 }

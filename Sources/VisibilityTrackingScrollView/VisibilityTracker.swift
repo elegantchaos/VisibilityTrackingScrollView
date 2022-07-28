@@ -11,19 +11,35 @@ public enum VisibilityChange {
 }
 
 public class VisibilityTracker<ID: Hashable>: ObservableObject {
-    var containerBounds: CGRect
-    var visibleItems: Set<ID>
-    var action: Action
+    /// The global bounds of the container view.
+    public var containerBounds: CGRect
+    
+    /// Dictionary containing the offset of every visible view.
+    public var visibleViews: [ID:CGFloat]
+    
+    /// Ids of the visible views, sorted by offset.
+    /// The first item is the top view, the last one, the bottom view.
+    public var sortedViewIDs: [ID]
+    
+    /// Action to perform when a view becomes visible or is hidden.
+    public var action: Action
+    
+    /// The id of the top visible view.
+    public var topVisibleView: ID? { sortedViewIDs.first }
+    
+    /// The id of the bottom visible view.
+    public var bottomVisibleView: ID? { sortedViewIDs.last }
 
-    public typealias Action = (ID, VisibilityChange) -> ()
+    /// Action callback signature.
+    public typealias Action = (ID, VisibilityChange, VisibilityTracker<ID>) -> ()
 
     public init(action: @escaping Action) {
         self.containerBounds = .zero
-        self.visibleItems = []
+        self.visibleViews = [:]
+        self.sortedViewIDs = []
         self.action = action
     }
     
-
     public func reportContainerBounds(_ bounds: CGRect) {
         containerBounds = bounds
     }
@@ -33,17 +49,26 @@ public class VisibilityTracker<ID: Hashable>: ObservableObject {
         let size = bounds.size
         let bottomRight = CGPoint(x: topLeft.x + size.width, y: topLeft.y + size.height)
         let isVisible = containerBounds.contains(topLeft) || containerBounds.contains(bottomRight)
-        if visibleItems.contains(id) {
-            if !isVisible {
-                visibleItems.remove(id)
-                action(id, .hidden)
+        let wasVisible = visibleViews[id] != nil
+
+        if isVisible {
+            visibleViews[id] = bounds.origin.y - containerBounds.origin.y
+            sortViews()
+            if !wasVisible {
+                action(id, .shown, self)
             }
         } else {
-            if isVisible {
-                visibleItems.insert(id)
-                action(id, .shown)
+            if wasVisible {
+                visibleViews.removeValue(forKey: id)
+                sortViews()
+                action(id, .hidden, self)
             }
         }
+    }
+    
+    func sortViews() {
+        let sortedPairs = visibleViews.sorted(by: { $0.1 < $1.1 })
+        sortedViewIDs = sortedPairs.map { $0.0 }
     }
 }
 
